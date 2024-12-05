@@ -20,6 +20,8 @@ Imports:
     here,
     utils, 
     sf, 
-    rnaturalearth
+    rnaturalearth,
+    dplyr,
+    stringr
 Depends: 
     ggplot2
