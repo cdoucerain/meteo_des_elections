@@ -22,6 +22,8 @@ Imports:
     sf, 
     rnaturalearth,
     dplyr,
-    stringr
+    stringr,
+    exactextractr,
+    raster
 Depends: 
     ggplot2
