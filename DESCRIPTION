@@ -20,6 +20,8 @@ Imports:
     here,
     utils, 
     sf, 
-    rnaturalearth
+    rnaturalearth,
+    exactextractr,
+    raster
 Depends: 
     ggplot2
