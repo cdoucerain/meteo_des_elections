@@ -5,5 +5,3 @@ toc: true
 # Welcome {.unnumbered}
 
 This is the welcome page.
-
-To do : add agenda ?
