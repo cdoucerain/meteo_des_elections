@@ -16,3 +16,28 @@ load_election_circ <- function(year){
   return(data)
 }
 
+#' pas fonctionelle : il manque la transormation des candidats en partis
+merge_years <- function(list_years){
+  
+  data_all <- data.frame()
+  for (yr in list_years){
+    # load data from both rounds
+    data_yr <- load_election_circ(yr)
+    
+    # add info on the round
+    data_yr$t1$tour <- 1
+    data_yr$t2$tour <- 2
+    # merge the two rounds
+    
+    # NEED TO TRANSFORM CANDIDATE NAMES TO PARTIES
+    
+    data_yr <- rbind(data_yr$t1, data_yr$t2)
+    data_yr$annee <- yr
+    
+    # merge with other years
+    rbind(data_all, data_yr)
+  }
+  return(data_all)
+}
+
+
