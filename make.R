@@ -12,12 +12,12 @@
 
 ## Install Dependencies (listed in DESCRIPTION) ----
 
-devtools::install_deps(upgrade = "never")
+devtools::install_deps()
 
 
 ## Load Project Addins (R Functions and Packages) ----
 
-devtools::load_all(here::here())
+devtools::load_all()
 
 
 ## Global Variables ----
@@ -29,3 +29,17 @@ devtools::load_all(here::here())
 
 # List all R scripts in a sequential order and using the following form:
 # source(here::here("analyses", "script_X.R"))
+
+
+
+## targets setup ----
+
+targets::tar_config_set(
+  store = 'outputs/pipeline', # where to store outputs created by targets
+  script = 'analyses/pipeline.R' # contains the workflows
+)
+
+## workflow ----
+
+targets::tar_make()
+
