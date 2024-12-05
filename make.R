@@ -19,27 +19,31 @@ devtools::install_deps()
 
 devtools::load_all()
 
+## Create function documentation ----
+
+devtools::document()
 
 ## Global Variables ----
 
-# You can list global variables here (or in a separate R script)
+year <- 2002
 
+## Run Project with Targets ----
 
-## Run Project ----
-
-# List all R scripts in a sequential order and using the following form:
-# source(here::here("analyses", "script_X.R"))
-
-
-
-## targets setup ----
+### targets setup ----
 
 targets::tar_config_set(
   store = 'outputs/pipeline', # where to store outputs created by targets
   script = 'analyses/pipeline.R' # contains the workflows
 )
 
-## workflow ----
+### visualize workflow ----
+
+targets::tar_visnetwork()
+
+### run workflow ----
 
 targets::tar_make()
+
+
+
 
