@@ -1,0 +1,6 @@
+---
+title: "chapter_1__agregate_whether_vote"
+editor: visual
+---
+
+# Calcul de la pluviométrie moyenne par circonscription
