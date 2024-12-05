@@ -1,6 +1,6 @@
 #' loads a csv file located in fodler data/
 read_data_file <- function(filename){
-  data <- read.csv(here::here("data",filename), header=TRUE, sep=',', dec='.')
+  data <- read.csv(here::here("data", "elections_sciences_po",filename), header=TRUE, sep=',', dec='.')
   return(data)
 }
 
