@@ -1,19 +1,26 @@
-#' projet: A Research Compendium
+#' projet: La météo des élections
 #' 
 #' @description 
-#' A paragraph providing a full description of the project and describing each 
-#' step of the workflow.
+#' The project analyses the influence of weather conditions on the 
+#' voting participation and results to the French presidential elections.
 #' 
-#' @author Carole Doucerain \email{carole.doucerain@gmail.com}
+#' As an example, we only consider a single election, 
+#' represented by the global variable `year`.
+#' 
+#' HERE DESCRIBE DIFFERENT STEPS OF WORKFLOW
+#' 
+#' 
+#' @author Carole Doucerain \email{carole.doucerain@cefe.cnrs.fr}
+#' @author Alycia Frochot \email{alycia.frochot@cefe.cnrs.fr}
+#' @author Etienne Henry \email{etienne.henry@cefe.cnrs.fr}
+#' @author Léo Streith \email{leo.streith@cefe.cnrs.fr}
 #' 
 #' @date 2024/12/05
-
 
 
 ## Install Dependencies (listed in DESCRIPTION) ----
 
 devtools::install_deps()
-
 
 ## Load Project Addins (R Functions and Packages) ----
 
