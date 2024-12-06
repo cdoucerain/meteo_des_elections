@@ -3,11 +3,12 @@
 [![License:
 GPL-2](https://img.shields.io/badge/License-GPL%20v2-blue.svg)](https://choosealicense.com/licenses/gpl-2.0/)
 
-*project description*
+Our project aims to correlate the abstention rate and the results of the 2002 election with the rainfall during the day of the election.
+
 
 ## TODO
 
-- [] Write project description in README
+- Write project description in README
 
 
 ## Content

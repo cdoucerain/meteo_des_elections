@@ -1,4 +1,7 @@
+data <- load_election_circ(2002)
+data_1 <- create_code_circo(data[[1]])
 
+data_2 <- create_code_circo(data[[2]])
 
 merge_df <- function(data){
   

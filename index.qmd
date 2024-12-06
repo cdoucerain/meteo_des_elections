@@ -34,7 +34,6 @@ knitr:
 devtools::load_all()
 ```
 
-
 # Circonscriptions
 
 ```{r}
