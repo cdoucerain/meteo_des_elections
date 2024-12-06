@@ -31,7 +31,7 @@ map_circon <- function(){
                                           colour = "grey99"),
           plot.title = element_text(hjust = 0.5)) +
     ggtitle("Carte des circonscriptions de France continentale + Corse")
-  
+  p
   path <- here::here("outputs","figures")
   
   dir.create(path, showWarnings = FALSE, recursive = TRUE)

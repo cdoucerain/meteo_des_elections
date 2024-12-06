@@ -27,4 +27,6 @@ create_code_circo <- function(data) {
     trimws(data$circonscription)
   )
   data$id_circo <- paste(data$Code.département, data$circonscription, sep="")
+
+  return(data)
 }

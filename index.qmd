@@ -1,7 +1,52 @@
 ---
-toc: true
+title: "La météo des élections"
+author: "Alycia, Carole, Etienne, Léo"
+date: "`r format(Sys.time(), '%Y/%m/%d')`"
+format:
+  html:
+    self_contained: true
+    fig_caption: yes
+    # theme: united
+    toc: true
+    toc_float:
+      collapsed: true
+
+execute:
+  echo: true
+  eval: true
+  message: false
+  fig-width: 7
+  fig-height: 7
+knitr:
+  opts_chunk: 
+    collapse: true
+    out-width: "100%"
+    dpi: 300
 ---
 
-# Bienvenue  {.unnumbered}
+# Bienvenue {.unnumbered}
 
-Ce site web a pour but d'explorer la relation entre la météo, plus précisément les précipitations, et les données des éléctions présidentielles françaises de 2002, par circonscription.
+```{r}
+#| label: 'setup'
+#| message: false
+
+## Load project ----
+devtools::load_all()
+```
+
+
+# Circonscriptions
+
+```{r}
+#| label: 'plot-count'
+#| out-width: '80%'
+#| fig-cap: "Carte des circonscriptions"
+
+# define image path - we're using an image that comes with the package
+img_path <- c("./outputs/figures/carte_circon.png")
+
+
+knitr::include_graphics(img_path)  # Remplacez par le chemin de votre 
+```
+
+The `echo: false` option disables the printing of code (only output is displayed).
