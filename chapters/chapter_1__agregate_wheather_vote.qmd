@@ -4,3 +4,29 @@ editor: visual
 ---
 
 # Calcul de la pluviométrie moyenne par circonscription
+
+## Premier tour
+
+```{r}
+#| label: 'carte_pluvio_1'
+#| out-width: '80%'
+#| fig-cap: "Pluviométrie moyenne le jour du premier tour des élections présidentielles 2002"
+
+map_pluvio_1_tour <- "file_to_map_pluvio_1_tour.png"
+
+knitrr::include_graphics(map_pluvio_1_tour)
+
+```
+
+## Second tour
+
+```{r}
+#| label: 'carte_pluvio_2'
+#| out-width: '80%'
+#| fig-cap: "Pluviométrie moyenne le jour du second tour des élections présidentielles 2002"
+
+map_pluvio_1_tour <- "file_to_map_pluvio_2_tour.png"
+
+knitrr::include_graphics(map_pluvio_2_tour)
+
+```
