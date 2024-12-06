@@ -41,7 +41,7 @@ map_ppt_cons <- function(){
          width = 7, height = 7)
   
   
-  y= circon, c("mean","quantile"), quantiles=c(0.5))
+y= c(circon, c("mean","quantile"), quantiles=c(0.5))
 circon_ppt_2
 
 ggplot() +

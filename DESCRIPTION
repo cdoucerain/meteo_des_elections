@@ -24,6 +24,7 @@ Imports:
     dplyr,
     stringr,
     exactextractr,
-    raster
+    raster,
+    targets
 Depends: 
     ggplot2
