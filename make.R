@@ -38,6 +38,7 @@ targets::tar_config_set(
   store = 'outputs/pipeline', # where to store outputs created by targets
   script = 'analyses/pipeline.R' # contains the workflows
 )
+targets::
 
 ## workflow ----
 
