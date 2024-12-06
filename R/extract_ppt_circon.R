@@ -52,10 +52,8 @@ extract_ppt_cons <- function(){
   r2 <- raster::crop(raster_2er, e)
   
   circon_ppt_2 <- circon_2
-  circon_ppt_2[, c("ppt_mean_2", "ppt_med_2")] <- exactextractr::exact_extract(x=r2, 
-                                       
-                                                                               
-                                                                                                              y= circon, c("mean","quantile"), quantiles=c(0.5))
+  circon_ppt_2[, c("ppt_mean_2", "ppt_med_2")] <- exactextractr::exact_extract(x=r2,y= circon, c("mean","quantile"),
+                                                                               quantiles=c(0.5))
   # Fuse both
   circon_ppt_2 <- circon_ppt_2 |> 
     sf::st_drop_geometry() |>
@@ -65,16 +63,16 @@ extract_ppt_cons <- function(){
   circon_ppt <- dplyr::left_join(circon_ppt_1,circon_ppt_2) |>
     dplyr::select(id_circo, ppt_mean_1, ppt_med_1, ppt_mean_2, ppt_med_2, geometry)
   
-  path_data <- here::here("outputs","process_data")
+  path_data <- here::here("process_data")
   
   dir.create(path_data, showWarnings = FALSE, recursive = TRUE)
   
-  filename <- c("ppt_circo_1.csv")
+  filename_shp <- c("ppt_circo.shp")
   
-  dest_file <- file.path(path_data, filename)
+  dest_file_shp <- file.path(path_data, filename_shp)
   
   #Save data
-  write.table(x=circon_ppt, file = dest_file, row.names= F)
-
+  
+  sf::st_write(circon_ppt,dsn = dest_file_shp)
   
 }
