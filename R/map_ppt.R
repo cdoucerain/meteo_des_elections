@@ -14,8 +14,6 @@
 
 map_ppt_cons <- function(){
   
-  
-  
   path_data <- here::here("process_data")
   
   filename_shp <- c("ppt_circo.shp")
@@ -23,6 +21,9 @@ map_ppt_cons <- function(){
   dest_file_shp <- file.path(path_data, filename_shp)
   
   ppt_circo <- sf::read_sf(dest_file_shp)
+  
+  world <- rnaturalearth::ne_countries(type = "countries", scale = "large")
+  
   
   p <- ggplot() +
     geom_sf(data= world, color= "white",fill= "grey80")+
