@@ -27,6 +27,8 @@ book:
   
   chapters:
     - index.qmd
+    - parts: "Agrégation les données de météo et de vote"
+    - parts: "Analyse les données d'abstention en fonction de la pluie"
     
 format:
   html:

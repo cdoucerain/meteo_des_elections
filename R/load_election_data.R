@@ -4,7 +4,11 @@ read_data_file <- function(filename){
   return(data)
 }
 
-#' loads election data from a given year, from the two rounds
+#' @title Load presidential election results
+#' @description loads election data from a given year, from the two rounds, per circonscription
+#' @param year year of the election
+#' @return list of 2 dataframes, one for each round of the election (`t1`and `t2`), containing the results of the election per circonscription
+#' @export
 load_election_circ <- function(year){
   file_t1 <- paste0("cdsp_presi", year, "t1_circ.csv") # 1er tour
   file_t2 <- paste0("cdsp_presi", year, "t2_circ.csv") # 2nd tour

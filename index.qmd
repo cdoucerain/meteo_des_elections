@@ -2,6 +2,6 @@
 toc: true
 ---
 
-# Welcome {.unnumbered}
+# Bienvenue  {.unnumbered}
 
-This is the welcome page.
+Ce site web a pour but d'explorer la relation entre la météo, plus précisément les précipitations, et les données des éléctions présidentielles françaises de 2002, par circonscription.
