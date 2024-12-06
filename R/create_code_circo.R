@@ -15,16 +15,7 @@
 #'
 
 create_code_circo <- function(data) {
-  #data <- load_election_circ(2002)[[2]]
-  data$Code.département <- ifelse(
-    nchar(trimws(data$Code.département)) == 1, 
-    paste0("0", trimws(data$Code.département)), 
-    trimws(data$Code.département)
-  )
-  data$circonscription <- ifelse(
-    nchar(trimws(data$circonscription)) == 1, 
-    paste0("0", trimws(data$circonscription)), 
-    trimws(data$circonscription)
-  )
-  data$id_circo <- paste(data$Code.département, data$circonscription, sep="")
+  data <- load_election_circ(2002)[[2]]
+  data$Code.département <- sprintf("%02s", data$Code.département)
+  data$id_circo
 }

@@ -40,13 +40,10 @@ This project is structured as follow:
 ```
 
 
-> [!NOTE]
+> [!NOTE]  
+> The folder **data/** is not present in this repository (listed in the `.gitignore`) 
 > but we provide the code to locally download raw data.
 
-## Data
-
-Data is available online : https://www.data.gouv.fr/fr/datasets/elections-presidentielles-1965-2012-1/#/resources/2e9635ad-2457-4f25-a023-73c3c8e269aa
-We then unzipped the file and copied all the data into the data/elections_sciences_po/ file
 
 
 ## Installation

@@ -1,56 +1,45 @@
-#' projet: La météo des élections
+#' projet: A Research Compendium
 #' 
 #' @description 
-#' The project analyses the influence of weather conditions on the 
-#' voting participation and results to the French presidential elections.
+#' A paragraph providing a full description of the project and describing each 
+#' step of the workflow.
 #' 
-#' As an example, we only consider a single election, 
-#' represented by the global variable `year`.
-#' 
-#' HERE DESCRIBE DIFFERENT STEPS OF WORKFLOW
-#' 
-#' 
-#' @author Carole Doucerain \email{carole.doucerain@cefe.cnrs.fr}
-#' @author Alycia Frochot \email{alycia.frochot@cefe.cnrs.fr}
-#' @author Etienne Henry \email{etienne.henry@cefe.cnrs.fr}
-#' @author Léo Streith \email{leo.streith@cefe.cnrs.fr}
+#' @author Carole Doucerain \email{carole.doucerain@gmail.com}
 #' 
 #' @date 2024/12/05
+
 
 
 ## Install Dependencies (listed in DESCRIPTION) ----
 
 devtools::install_deps()
 
+
 ## Load Project Addins (R Functions and Packages) ----
 
 devtools::load_all()
 
-## Create function documentation ----
-
-devtools::document()
 
 ## Global Variables ----
 
-year <- 2002
+# You can list global variables here (or in a separate R script)
 
-## Run Project with Targets ----
 
-### targets setup ----
+## Run Project ----
+
+# List all R scripts in a sequential order and using the following form:
+# source(here::here("analyses", "script_X.R"))
+
+
+
+## targets setup ----
 
 targets::tar_config_set(
   store = 'outputs/pipeline', # where to store outputs created by targets
   script = 'analyses/pipeline.R' # contains the workflows
 )
 
-### visualize workflow ----
-
-targets::tar_visnetwork()
-
-### run workflow ----
+## workflow ----
 
 targets::tar_make()
-
-
-
 
