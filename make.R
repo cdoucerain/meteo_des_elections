@@ -32,7 +32,7 @@ devtools::document()
 
 ## Global Variables ----
 
-year <- 2002
+year <- "2002"
 
 ## Run Project with Targets ----
 
@@ -50,6 +50,10 @@ targets::tar_visnetwork()
 ### run workflow ----
 
 targets::tar_make()
+
+### visualize workflow ----
+
+targets::tar_visnetwork()
 
 
 

@@ -1,4 +1,6 @@
-merge_df <- function(){
+
+
+merge_df <- function(data){
   
   data_1 <- create_code_circo(data[[1]])
   
@@ -39,39 +41,38 @@ merge_df <- function(){
                   prop_abs_2 = round((n_abs_2 / Inscrits_2)*100, 1))
   
   
-  write.table(meteo_vote, "./process_data/meteo_vote.csv")
+  write.table(meteo_vote, "process_data/meteo_vote.csv")
+  
+  return(meteo_vote)
   
 }
 
 
-model_df <- function(){
+model_df <- function(data){
   
-  meteo_vote_df <- read.table("./process_data/meteo_vote.csv")
+  meteo_vote_df <- data #read.table("./process_data/meteo_vote.csv")
   
-  return(summary(lm(data= meteo_vote_df, 
+  return(summary(stats::lm(data= meteo_vote_df, 
                     prop_abs_2~ppt_med_2)))
   
 }
 
 
-df_plot_model <- function(){
+df_plot_model <- function(data){
   
+  #data <- targets::tar_read("meteo_vote")
   
-  meteo_vote_df <- read.table("./process_data/meteo_vote.csv")
+  meteo_vote_df <- data #read.table("./process_data/meteo_vote.csv")
   
-  
-  p <- ggplot(meteo_vote, 
-         aes(x= ppt_med_2, y=prop_abs))+
-    geom_point() +
-    theme_bw()
-  
-  ggplot(meteo_vote, 
-         aes(x= ppt_med_2, y=prop_abs_2))+
+  names(meteo_vote_df)
+  p <- ggplot(meteo_vote_df, 
+              aes(x= ppt_med_2, y=prop_abs_2))+
     geom_point() +
     labs(x="Median precipitation", 
          y= "Proportion absentéisme")+
     geom_smooth(method= "lm")+
     theme_bw()
+  
   
   ggsave("./outputs/figures/regression_2nd_tour.png", p, 
          width = 7, height = 7)
